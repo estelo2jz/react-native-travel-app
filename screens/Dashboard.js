@@ -219,12 +219,14 @@ const Dashboard = ({ navigation }) => {
     )
   }
 
+
+  // were retreivin selectedPlace the data when click using useEffect on Place Screen 
   function exploreButtonHandler() {
     // get places current index
     const currentIndex = parseInt(placesScrollPosition, 10) + 1 
     console.log(places[currentIndex])
     // Navigate to the next screen
-    navigation.navigate('Place', {selectedPlaces: places[currentIndex] })
+    navigation.navigate('Place', {selectedPlace: places[currentIndex] })
   }
 
   function renderPlaces() {
