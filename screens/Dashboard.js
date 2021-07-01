@@ -129,9 +129,9 @@ const Dashboard = ({ navigation }) => {
             }
           ], { useNativeDriver: false })}
           // this will able to change the right countries when we scroll to a country
-        onMomentumScrollEnd={(evnet) => {
+        onMomentumScrollEnd={(event) => {
           // with these we can actually calc the current position
-          var position = (evnet.nativeEvent.contentOffset.x / COUNTRIES_ITEM_SIZE).toFixed(0)
+          var position = (event.nativeEvent.contentOffset.x / COUNTRIES_ITEM_SIZE).toFixed(0)
 
           // once we calc the position, we can Set the Place
           setPlaces([
